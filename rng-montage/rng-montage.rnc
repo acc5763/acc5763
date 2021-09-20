@@ -6,4 +6,4 @@ level= attribute level {"book" | "inner" | text}
 
 
 \text = element text {poem+}
-poem 
+poem = element poem {id, title, lineGroup}
