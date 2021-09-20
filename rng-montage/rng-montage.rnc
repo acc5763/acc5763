@@ -1,0 +1,9 @@
+start = root
+root = element  xml {source, \text}
+source = element source {title, altTitle, author,pubPlace, publisher, date, note}
+title = element title {level, text} 
+level= attribute level {"book" | "inner" | text}
+
+
+\text = element text {poem+}
+poem 
