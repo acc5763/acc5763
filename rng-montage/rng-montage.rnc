@@ -1,9 +1,12 @@
 start = root
-root = element  xml {source, \text}
+root = element  xml {source, \text} #source is holding metadata
 source = element source {title, altTitle, author,pubPlace, publisher, date, note}
 title = element title {level, text} 
 level= attribute level {"book" | "inner" | text}
 
 
 \text = element text {poem+}
-poem = element poem {id, title, lineGroup}
+poem = element poem {id, title, lineGroup} #text is holdoing the name text
+id = attribute id {"harlem" | "goodMorning" | text}
+lineGroup = element lineGroup {line+}
+line = element line {n, mixed {(motif | emph | place | placeName)*}} 
